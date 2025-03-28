@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nyala", "Noto Sans Ethiopic", sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #00aaff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease;
+}
+
+p {
+    
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    animation: fadeIn 1.5s ease;
+}
+
+.projects-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-card {
+    background: #2c2c2c;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    animation: slideIn 0.5s ease forwards;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+}
+
+.project-image {
+    flex: 0 0 150px;
+    margin-right: 1.5rem;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-card h2 {
+    color: #00aaff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    color: #cccccc;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags span {
+    background: #444;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+.tags span:hover {
+    background: #555;
+}
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #00aaff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0088cc;
+}
+
+.btn-secondary {
+    background-color: #444;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .projects-list {
+        padding: 0;
+    }
+
+    .project-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+} 
